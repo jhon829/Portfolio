@@ -1,0 +1,236 @@
+.experience {
+  min-height: 100vh;
+  padding: 80px 24px;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+}
+
+.experience-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+}
+
+.subsection-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-sub);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 경력 카드 */
+.experience-card {
+  background: var(--color-bg);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.exp-company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.exp-company {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.exp-role {
+  font-size: 0.875rem;
+  color: var(--color-point);
+  font-weight: 500;
+}
+
+.exp-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.exp-period {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.exp-type {
+  font-size: 0.75rem;
+  color: var(--color-text-sub);
+  background: rgba(129, 140, 248, 0.1);
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.exp-description {
+  font-size: 0.875rem;
+  color: var(--color-text-sub);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.exp-tasks {
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.exp-tasks li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 6px;
+  font-size: 0.8125rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.exp-tasks li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-point);
+}
+
+.exp-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-tag {
+  font-size: 0.6875rem;
+  padding: 4px 10px;
+  background: #f1f5f9;
+  color: var(--color-text);
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* 활동 섹션 */
+.activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.activity-item {
+  padding: 14px 16px;
+  background: var(--color-bg);
+  border-radius: 10px;
+  border-left: 3px solid var(--color-point);
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.activity-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.activity-period {
+  font-size: 0.6875rem;
+  color: var(--color-text-sub);
+}
+
+.activity-description {
+  font-size: 0.75rem;
+  color: var(--color-text-sub);
+  line-height: 1.4;
+}
+
+/* 인프라 섹션 */
+.infra-section {
+  margin-top: 12px;
+}
+
+.infra-card {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--color-bg);
+  border-radius: 10px;
+}
+
+.infra-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  background: rgba(129, 140, 248, 0.1);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.infra-content h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.infra-content p {
+  font-size: 0.75rem;
+  color: var(--color-text-sub);
+  margin-bottom: 2px;
+}
+
+.infra-detail {
+  font-size: 0.6875rem;
+  color: var(--color-text-sub);
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .experience {
+    min-height: auto;
+    padding: 80px 24px;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .exp-header {
+    flex-direction: column;
+  }
+
+  .exp-meta {
+    align-items: flex-start;
+  }
+}
