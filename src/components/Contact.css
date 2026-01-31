@@ -1,0 +1,155 @@
+.contact {
+  min-height: 100vh;
+  padding: 80px 24px 0;
+  background: linear-gradient(180deg, var(--color-bg) 0%, #fafafa 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact-content {
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.contact-description {
+  font-size: 1rem;
+  color: var(--color-text-sub);
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: var(--color-bg);
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-item:hover {
+  border-color: var(--color-point);
+  box-shadow: 0 4px 12px rgba(129, 140, 248, 0.1);
+  transform: translateY(-2px);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(129, 140, 248, 0.1);
+  border-radius: 10px;
+  color: var(--color-point);
+  flex-shrink: 0;
+}
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  color: var(--color-text-sub);
+}
+
+.contact-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.contact-cta {
+  display: inline-block;
+  padding: 14px 40px;
+  background: var(--color-point);
+  color: white;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-cta:hover {
+  background: var(--color-point-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(129, 140, 248, 0.3);
+  color: white;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  padding: 24px 24px;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer p {
+  font-size: 0.8125rem;
+  color: var(--color-text-sub);
+  margin-bottom: 2px;
+}
+
+.footer-note {
+  font-size: 0.6875rem;
+  color: #94a3b8;
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+  .contact {
+    min-height: auto;
+    padding: 80px 24px 0;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+
+  .contact-cta {
+    width: 100%;
+    text-align: center;
+  }
+}
