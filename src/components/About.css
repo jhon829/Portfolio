@@ -1,0 +1,240 @@
+.about {
+  min-height: 100vh;
+  padding: 80px 24px;
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+}
+
+.about-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 220px 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-image {
+  /* 프로필 이미지 */
+}
+
+.profile-image-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px dashed var(--color-point);
+}
+
+.placeholder-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.placeholder-desc {
+  font-size: 0.75rem;
+  color: var(--color-text-sub);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-intro {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.about-intro strong {
+  color: var(--color-point);
+}
+
+.about-description {
+  font-size: 0.9375rem;
+  color: var(--color-text-sub);
+  line-height: 1.7;
+}
+
+.about-description strong {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.highlight-icon {
+  font-size: 1.25rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(129, 140, 248, 0.1);
+  border-radius: 10px;
+}
+
+.highlight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.highlight-label {
+  font-size: 0.75rem;
+  color: var(--color-text-sub);
+}
+
+.highlight-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* Skills Section - 오른쪽 영역 */
+.skills-section {
+  padding-left: 32px;
+  border-left: 1px solid #e2e8f0;
+}
+
+.skills-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 8px;
+  background: #fafafa;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.skill-item:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+.skill-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.skill-name {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--color-text);
+  text-align: center;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .about {
+    min-height: auto;
+    padding: 80px 24px;
+  }
+
+  .about-content {
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+  }
+
+  .skills-section {
+    grid-column: 1 / -1;
+    padding-left: 0;
+    padding-top: 32px;
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-image {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  .about-intro {
+    font-size: 1.125rem;
+  }
+
+  .about-description {
+    font-size: 0.875rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .skill-item {
+    padding: 12px 6px;
+  }
+
+  .skill-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .skill-name {
+    font-size: 0.625rem;
+  }
+}
