@@ -13,54 +13,38 @@
 }
 
 .section-title {
-  font-size: clamp(1.75rem, 4vw, 2rem);
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: var(--color-text);
-  letter-spacing: -0.02em;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 48px;
+  color: var(--color-text-sub);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .about-content {
   display: grid;
   grid-template-columns: 220px 1fr 1fr;
   gap: 48px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .about-image {
   /* 프로필 이미지 */
 }
 
-.profile-image-placeholder {
+.profile-image {
   width: 100%;
   aspect-ratio: 3 / 4;
-  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  object-fit: cover;
   border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border: 2px dashed var(--color-point);
-}
-
-.placeholder-text {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-text);
-}
-
-.placeholder-desc {
-  font-size: 0.75rem;
-  color: var(--color-text-sub);
-  text-align: center;
-  line-height: 1.4;
 }
 
 .about-text {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  justify-content: space-between;
+  min-height: 100%;
 }
 
 .about-intro {
@@ -96,35 +80,21 @@
 
 .highlight-item {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 12px;
-}
-
-.highlight-icon {
-  font-size: 1.25rem;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(129, 140, 248, 0.1);
-  border-radius: 10px;
-}
-
-.highlight-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
 }
 
 .highlight-label {
   font-size: 0.75rem;
+  font-weight: 500;
   color: var(--color-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  min-width: 70px;
 }
 
 .highlight-value {
   font-size: 0.875rem;
-  font-weight: 500;
   color: var(--color-text);
 }
 
@@ -135,45 +105,83 @@
 }
 
 .skills-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-sub);
   margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-category {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.category-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.subcategories {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.subcategory {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subcategory-label {
+  font-size: 0.75rem;
+  color: var(--color-text-sub);
+  min-width: 60px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 .skill-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: 14px 8px;
+  gap: 6px;
+  padding: 6px 10px;
   background: #fafafa;
-  border-radius: 10px;
+  border-radius: 6px;
   transition: all 0.2s ease;
 }
 
 .skill-item:hover {
   background: #f1f5f9;
-  transform: translateY(-2px);
 }
 
 .skill-icon {
-  width: 32px;
-  height: 32px;
+  width: 18px;
+  height: 18px;
   object-fit: contain;
 }
 
 .skill-name {
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--color-text);
-  text-align: center;
 }
 
 /* 반응형 */
@@ -196,9 +204,6 @@
     border-top: 1px solid #e2e8f0;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
 }
 
 @media (max-width: 768px) {
@@ -220,9 +225,14 @@
     font-size: 0.875rem;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+  .subcategory {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .subcategory-label {
+    min-width: auto;
   }
 
   .skill-item {
@@ -235,6 +245,6 @@
   }
 
   .skill-name {
-    font-size: 0.625rem;
+    font-size: 0.75rem;
   }
 }
