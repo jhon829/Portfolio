@@ -5,6 +5,7 @@ const Contact = () => {
     <section id="contact" className="contact">
       <div className="contact-container">
         <div className="contact-content">
+          <span className="contact-label-header">Contact</span>
           <h2 className="contact-title">Let's Connect</h2>
           <p className="contact-description">
             새로운 기회나 협업에 대해 이야기하고 싶으시다면<br />
