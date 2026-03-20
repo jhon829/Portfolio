@@ -1,10 +1,6 @@
 .contact {
-  min-height: 100vh;
-  padding: 80px 24px 0;
-  background: var(--color-bg);
-  display: flex;
+  /* page-frame 스타일은 index.css main > section에서 처리 */
   flex-direction: column;
-  justify-content: center;
 }
 
 .contact-container {
@@ -19,28 +15,18 @@
   text-align: center;
 }
 
-.contact-label-header {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--color-text-sub);
-  margin-bottom: 24px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-.contact-title {
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  font-weight: 600;
+.thanks-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
   color: var(--color-text);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   letter-spacing: -0.02em;
 }
 
-.contact-description {
-  font-size: 1rem;
+.thanks-description {
+  font-size: 1.0625rem;
   color: var(--color-text-sub);
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 36px;
 }
 
@@ -144,11 +130,6 @@
 
 /* 반응형 */
 @media (max-width: 600px) {
-  .contact {
-    min-height: auto;
-    padding: 80px 24px 0;
-  }
-
   .contact-item {
     flex-direction: column;
     text-align: center;

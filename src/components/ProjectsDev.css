@@ -1,0 +1,180 @@
+/* ========================================
+   ProjectsDev — 개발자용 추가 스타일
+   (공통 스타일은 Projects.css에서 상속)
+   ======================================== */
+
+/* Overview Description */
+.dev-overview-desc {
+  font-size: 1.0625rem;
+  color: var(--color-text-sub);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Project Cards (Overview slide) */
+.dev-project-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.dev-project-card {
+  padding: 28px 24px;
+  background: #fafafa;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.dev-project-card.featured {
+  background: rgba(129, 140, 248, 0.04);
+  border-color: rgba(129, 140, 248, 0.25);
+}
+
+.dev-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dev-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.dev-card-badge {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: rgba(129, 140, 248, 0.1);
+  color: var(--color-point);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dev-project-card.featured .dev-card-badge {
+  background: var(--color-point);
+  color: white;
+}
+
+.dev-card-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-sub);
+  line-height: 1.5;
+}
+
+.dev-card-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-sub);
+}
+
+/* Code Block */
+.code-block {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  padding: 16px 20px;
+  background: #1e1b4b;
+  color: #e2e8f0;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 0;
+}
+
+/* Code Stats */
+.code-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.code-stat-item {
+  display: grid;
+  grid-template-columns: 80px 56px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 14px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+}
+
+.code-file {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  color: var(--color-point);
+}
+
+.code-lines {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-sub);
+}
+
+.code-desc {
+  font-size: 0.8125rem;
+  color: var(--color-text);
+}
+
+/* Dev Tools Grid */
+.dev-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.dev-tool-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 14px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+}
+
+.dev-tool-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.dev-tool-desc {
+  font-size: 0.6875rem;
+  color: var(--color-text-sub);
+}
+
+/* Architecture Tree */
+.arch-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .dev-project-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .dev-tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .code-stat-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

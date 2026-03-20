@@ -1,9 +1,5 @@
 .about {
-  min-height: 100vh;
-  padding: 80px 24px;
-  background-color: var(--color-bg);
-  display: flex;
-  align-items: center;
+  /* page-frame 스타일은 index.css main > section에서 처리 */
 }
 
 .about-container {
@@ -13,9 +9,9 @@
 }
 
 .section-title {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
   color: var(--color-text-sub);
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -23,8 +19,8 @@
 
 .about-content {
   display: grid;
-  grid-template-columns: 220px 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 300px 1fr 1fr;
+  gap: 60px;
   align-items: stretch;
 }
 
@@ -48,7 +44,7 @@
 }
 
 .about-intro {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: var(--color-text);
   line-height: 1.5;
@@ -59,9 +55,9 @@
 }
 
 .about-description {
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
   color: var(--color-text-sub);
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .about-description strong {
@@ -85,16 +81,16 @@
 }
 
 .highlight-label {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--color-text-sub);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  min-width: 70px;
+  min-width: 80px;
 }
 
 .highlight-value {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-text);
 }
 
@@ -116,7 +112,7 @@
 .skills-categories {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 
 .skill-category {
@@ -161,10 +157,10 @@
 .skill-item {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 10px;
+  gap: 8px;
+  padding: 8px 14px;
   background: #fafafa;
-  border-radius: 6px;
+  border-radius: 8px;
   transition: all 0.2s ease;
 }
 
@@ -173,24 +169,19 @@
 }
 
 .skill-icon {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   object-fit: contain;
 }
 
 .skill-name {
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   font-weight: 500;
   color: var(--color-text);
 }
 
 /* 반응형 */
 @media (max-width: 1024px) {
-  .about {
-    min-height: auto;
-    padding: 80px 24px;
-  }
-
   .about-content {
     grid-template-columns: 200px 1fr;
     gap: 40px;

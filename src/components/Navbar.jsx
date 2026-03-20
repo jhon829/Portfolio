@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useRole } from '../context/RoleContext';
+import { captureFullPage } from '../utils/captureFullPage';
 import './Navbar.css';
 
 const Navbar = () => {
+  const role = useRole();
   const [scrolled, setScrolled] = useState(false);
+  const [capturing, setCapturing] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,17 +23,55 @@ const Navbar = () => {
     { label: 'Contact', href: '#contact' },
   ];
 
+  const otherRole = role === 'planner' ? 'developer' : 'planner';
+  const otherLabel = role === 'planner' ? 'Developer ver.' : 'Planner ver.';
+
+  const handleCapture = async () => {
+    if (capturing) return;
+    setCapturing(true);
+    try {
+      await captureFullPage();
+    } catch (err) {
+      console.error('Capture failed:', err);
+    } finally {
+      setCapturing(false);
+    }
+  };
+
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <a href="#" className="navbar-logo">김동년</a>
-        <ul className="navbar-menu">
-          {navItems.map((item) => (
-            <li key={item.label}>
-              <a href={item.href}>{item.label}</a>
-            </li>
-          ))}
-        </ul>
+        <a href="/" className="navbar-logo">김동년</a>
+        <div className="navbar-right">
+          <ul className="navbar-menu">
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <a href={item.href}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+          <a href={`/${otherRole}`} className="role-switch-btn">
+            {otherLabel}
+          </a>
+          <button
+            className={`capture-btn ${capturing ? 'capturing' : ''}`}
+            onClick={handleCapture}
+            disabled={capturing}
+            title="포트폴리오 PDF 저장"
+          >
+            {capturing ? (
+              <svg className="capture-spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+              </svg>
+            ) : (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
     </nav>
   );

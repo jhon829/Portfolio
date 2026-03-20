@@ -1,0 +1,18 @@
+.spigen-project {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spigen-project-container {
+  max-width: var(--max-width);
+  width: 100%;
+  padding: 0 24px;
+}
+
+.spigen-project-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

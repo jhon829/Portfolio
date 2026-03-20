@@ -1,0 +1,79 @@
+.workstyle {
+  /* page-frame 스타일은 index.css main > section에서 처리 */
+  flex-direction: column;
+}
+
+.workstyle-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.workstyle-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+.workstyle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.workstyle-card {
+  padding: 28px 24px;
+  background: #fafafa;
+  border-radius: 14px;
+  border: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+.workstyle-card:hover {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+.workstyle-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-point);
+  letter-spacing: 0.05em;
+}
+
+.workstyle-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.workstyle-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-sub);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .workstyle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .workstyle-heading {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .workstyle-grid {
+    grid-template-columns: 1fr;
+  }
+}

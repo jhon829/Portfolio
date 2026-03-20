@@ -52,3 +52,37 @@ a:hover {
   margin: 0 auto;
   padding: 0 24px;
 }
+
+/* Page Frame - 1920x1080 (16:9) */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 24px;
+  padding-top: calc(var(--nav-height) + 40px);
+  background: #e8e8e8;
+}
+
+main > section {
+  width: 100%;
+  max-width: 1920px;
+  aspect-ratio: 16 / 9;
+  background: var(--color-bg);
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 120px;
+}
+
+/* 프레임 내부에서는 max-width 제한 해제 */
+main > section .about-container,
+main > section .experience-container,
+main > section .projects-container,
+main > section .contact-container {
+  max-width: 100%;
+}

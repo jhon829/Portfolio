@@ -1,9 +1,5 @@
 .experience {
-  min-height: 100vh;
-  padding: 80px 24px;
-  background-color: var(--color-bg);
-  display: flex;
-  align-items: center;
+  /* page-frame 스타일은 index.css main > section에서 처리 */
 }
 
 .experience-container {
@@ -316,11 +312,6 @@
 
 /* 반응형 */
 @media (max-width: 900px) {
-  .experience {
-    min-height: auto;
-    padding: 80px 24px;
-  }
-
   .experience-top {
     grid-template-columns: 1fr;
     gap: 32px;

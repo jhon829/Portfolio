@@ -1,0 +1,139 @@
+.landing {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8e8e8;
+  padding: 40px 24px;
+}
+
+.landing-frame {
+  width: 100%;
+  max-width: 1920px;
+  aspect-ratio: 16 / 9;
+  background: var(--color-bg);
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 120px;
+}
+
+.landing-content {
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.landing-greeting {
+  font-size: 1.25rem;
+  color: var(--color-text-sub);
+  margin-bottom: 8px;
+}
+
+.landing-name {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.landing-desc {
+  font-size: 1.125rem;
+  color: var(--color-text-sub);
+  margin-bottom: 48px;
+}
+
+.landing-cards {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}
+
+.role-card {
+  flex: 1;
+  max-width: 380px;
+  padding: 40px 32px;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  background: #fff;
+  text-align: left;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: all 0.25s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.role-card:hover {
+  border-color: var(--color-point);
+  box-shadow: 0 8px 24px rgba(129, 140, 248, 0.15);
+  transform: translateY(-4px);
+  color: var(--color-text);
+}
+
+.role-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.role-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-sub);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.role-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.role-tag {
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  background: #f1f5f9;
+  color: var(--color-text-sub);
+  border-radius: 20px;
+}
+
+.role-arrow {
+  position: absolute;
+  top: 40px;
+  right: 32px;
+  font-size: 1.5rem;
+  color: var(--color-text-sub);
+  transition: all 0.25s ease;
+}
+
+.role-card:hover .role-arrow {
+  color: var(--color-point);
+  transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+  .landing-frame {
+    aspect-ratio: auto;
+    min-height: 100vh;
+    padding: 40px 24px;
+  }
+
+  .landing-name {
+    font-size: 2.5rem;
+  }
+
+  .landing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .role-card {
+    max-width: 100%;
+    width: 100%;
+  }
+}

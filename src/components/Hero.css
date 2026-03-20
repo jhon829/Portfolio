@@ -1,10 +1,5 @@
 .hero {
-  min-height: 55vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  padding-top: 80px;
+  /* page-frame 스타일은 index.css main > section에서 처리 */
 }
 
 .hero-container {
@@ -83,5 +78,23 @@
   50% {
     transform: translateY(6px);
   }
+}
+
+/* Keywords */
+.hero-keywords {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.hero-keyword {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-point);
+  padding: 6px 16px;
+  border: 1px solid rgba(129, 140, 248, 0.3);
+  border-radius: 20px;
+  letter-spacing: 0.02em;
 }
 
