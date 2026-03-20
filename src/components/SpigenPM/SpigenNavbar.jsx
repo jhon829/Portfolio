@@ -21,7 +21,7 @@ const SpigenNavbar = () => {
   return (
     <nav className={`spigen-navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="spigen-navbar-container">
-        <a href="/" className="spigen-navbar-logo">김동년</a>
+        <span className="spigen-navbar-logo">김동년 포트폴리오</span>
         <ul className="spigen-navbar-menu">
           {navItems.map((item) => (
             <li key={item.label}>

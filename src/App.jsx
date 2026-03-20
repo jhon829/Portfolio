@@ -9,8 +9,6 @@ import ProjectsDev from './components/ProjectsDev';
 import WorkStyle from './components/WorkStyle';
 import Contact from './components/Contact';
 import SpigenNavbar from './components/SpigenPM/SpigenNavbar';
-import SpigenHome from './components/SpigenPM/SpigenHome';
-import SpigenIntroduction from './components/SpigenPM/SpigenIntroduction';
 import SpigenProject from './components/SpigenPM/SpigenProject';
 
 function getRole() {
@@ -32,11 +30,7 @@ function App() {
     return (
       <>
         <SpigenNavbar />
-        <main>
-          <SpigenHome />
-          <SpigenIntroduction />
-          <SpigenProject />
-        </main>
+        <SpigenProject />
       </>
     );
   }
