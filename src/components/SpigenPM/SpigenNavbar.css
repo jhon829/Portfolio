@@ -27,11 +27,12 @@
 .spigen-navbar-logo {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #009DFF;
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
 
-.spigen-navbar-logo:hover {
-  color: #009DFF;
+.spigen-navbar.scrolled .spigen-navbar-logo {
+  color: #000000;
 }
 
 .spigen-navbar-menu {
@@ -42,11 +43,11 @@
 
 .spigen-navbar-menu a {
   font-size: 0.9375rem;
-  color: #009DFF;
+  color: #ffffff;
   font-weight: 500;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 }
 
-.spigen-navbar-menu a:hover {
+.spigen-navbar.scrolled .spigen-navbar-menu a {
   color: #009DFF;
 }
