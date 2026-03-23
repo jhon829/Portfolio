@@ -1,11 +1,18 @@
 import './SpigenProject.css';
 
-const images = Object.values(
+const imageEntries = Object.entries(
   import.meta.glob('../../assets/portfolio/*.png', { eager: true, query: '?url', import: 'default' })
 );
+const images = imageEntries
+  .sort(([a], [b]) => {
+    const numA = parseInt(a.match(/(\d+)\.png$/)[1]);
+    const numB = parseInt(b.match(/(\d+)\.png$/)[1]);
+    return numA - numB;
+  })
+  .map(([, src]) => src);
 
 const SpigenProject = () => {
-  const anchors = { 0: 'home', 1: 'introduction', 2: 'project' };
+  const anchors = { 0: 'cover', 1: 'summary', 2: 'project', 16: 'strength' };
 
   return (
     <div className="spigen-portfolio">

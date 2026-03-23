@@ -9,4 +9,5 @@
   width: 100%;
   height: auto;
   display: block;
+  scroll-margin-top: var(--nav-height);
 }

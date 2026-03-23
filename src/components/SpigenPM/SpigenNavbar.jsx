@@ -13,9 +13,10 @@ const SpigenNavbar = () => {
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Introduction', href: '#introduction' },
+    { label: 'Cover', href: '#cover' },
+    { label: 'Summary', href: '#summary' },
     { label: 'Project', href: '#project' },
+    { label: 'Strength', href: '#strength' },
   ];
 
   return (
