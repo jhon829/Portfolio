@@ -7,6 +7,7 @@ const Navbar = () => {
   const role = useRole();
   const [scrolled, setScrolled] = useState(false);
   const [capturing, setCapturing] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +16,15 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
 
   const navItems = [
     { label: 'About', href: '#about' },
@@ -71,6 +81,32 @@ const Navbar = () => {
               </svg>
             )}
           </button>
+          <button
+            className={`hamburger-btn ${menuOpen ? 'open' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="메뉴 열기"
+          >
+            <span className="hamburger-line" />
+            <span className="hamburger-line" />
+            <span className="hamburger-line" />
+          </button>
+        </div>
+      </div>
+
+      {/* 모바일 오버레이 메뉴 */}
+      <div className={`mobile-overlay ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(false)} />
+      <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+        <ul className="mobile-menu-list">
+          {navItems.map((item) => (
+            <li key={item.label}>
+              <a href={item.href} onClick={() => setMenuOpen(false)}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+        <div className="mobile-menu-footer">
+          <a href={`/${otherRole}`} className="role-switch-btn" onClick={() => setMenuOpen(false)}>
+            {otherLabel}
+          </a>
         </div>
       </div>
     </nav>

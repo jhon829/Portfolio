@@ -1,6 +1,8 @@
 # 빌드 스테이지
 FROM node:20-alpine AS builder
 
+RUN apk add --no-cache python3 make g++ pkgconfig pixman-dev cairo-dev pango-dev jpeg-dev giflib-dev librsvg-dev
+
 WORKDIR /app
 
 # 의존성 설치
